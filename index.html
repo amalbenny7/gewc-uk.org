@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GEWC UK</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="https://www.gewc-uk.org/asset/img/gewc-uk-logo3.png" alt="GEWC UK Logo">
+      </div>
+      <nav class="nav-links" id="navMenu">
+        <a href="#">Home</a>
+        <a href="#">UK Mission</a>
+        <a href="#">Charity Outreaches</a>
+        <a href="#">Sermons</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+        <a class="donate" href="#">Donate</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Welcome to GEWC UK</h1>
+        <p>To Know Jesus &amp; Make Jesus Known</p>
+        <div class="cta-row">
+          <a class="cta" href="#">Join Us</a>
+          <a class="cta" href="#">Get Involved</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="section events">
+    <h2>Upcoming Events</h2>
+    <div class="event-grid">
+      <article class="event-card">
+        <img src="https://source.unsplash.com/600x400/?prayer,church" alt="Prayer Event">
+        <h3>Prayer Meeting</h3>
+        <p>Join us for our monthly prayer meeting.</p>
+        <a href="#" class="btn">View Detail</a>
+      </article>
+      <article class="event-card">
+        <img src="https://source.unsplash.com/600x400/?bible,study" alt="Bible Study">
+        <h3>Bible Study</h3>
+        <p>Dive deeper into the Word with us every Wednesday.</p>
+        <a href="#" class="btn">View Detail</a>
+      </article>
+      <article class="event-card">
+        <img src="https://source.unsplash.com/600x400/?community,help" alt="Outreach Event">
+        <h3>Community Outreach</h3>
+        <p>Sharing Christ’s love through outreach.</p>
+        <a href="#" class="btn">View Detail</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sermon -->
+  <section class="section sermon">
+    <h2>Latest Sermon</h2>
+    <div class="sermon-video">
+      <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/CtHW2S5S144?autoplay=1&mute=1"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="https://www.gewc-uk.org/asset/img/gewc-uk-logo3.png" alt="GEWC UK Logo">
+      </div>
+      <div class="footer-contact">
+        <p>77-79 Rushey Green, Catford, London, United Kingdom</p>
+        <p>Email: info@gewc-uk.org</p>
+        <p>Phone: +44(0)7392445326 | +44(0)7467154974</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      document.getElementById("navMenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
