@@ -14,8 +14,10 @@
 </head>
 
 <body>
+  <!-- Header partial -->
   <div id="header"></div>
 
+  <!-- About Section -->
   <section class="about-section">
     <div class="about-banner">
       <h1>About Us</h1>
@@ -24,7 +26,8 @@
 
     <div class="about-container">
 
-      <article class="about-card">
+      <!-- History -->
+      <article class="about-card" id="history">
         <h2>Our History</h2>
         <p>
           The Greater Evangelism World Crusade UK began as a small fellowship with a deep conviction to reach the nations with the love and power of Jesus Christ. 
@@ -39,7 +42,8 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <!-- Governance -->
+      <article class="about-card" id="governance">
         <h2>Governance</h2>
         <p>
           Our leadership structure is guided by integrity, accountability, and spiritual excellence. 
@@ -57,7 +61,8 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <!-- Administration -->
+      <article class="about-card" id="administration">
         <h2>Administration</h2>
         <p>
           The administrative arm of GEWC UK ensures that the day-to-day operations of the ministry run effectively and in alignment with our spiritual mission. 
@@ -74,7 +79,8 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <!-- Mission -->
+      <article class="about-card" id="mission">
         <h2>Mission</h2>
         <p>
           Our mission is to know Jesus intimately and to make Him known throughout the nations. 
@@ -87,7 +93,8 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <!-- Mandate -->
+      <article class="about-card" id="mandate">
         <h2>Mandate</h2>
         <p>
           The church’s divine mandate is rooted in the Great Commission — to proclaim the Gospel to all nations and to guide believers in living according to the Word of God. 
@@ -99,7 +106,8 @@
         </p>
       </article>
 
-      <article class="about-card">
+      <!-- Motto & Vision -->
+      <article class="about-card" id="vision">
         <h2>Motto & Vision</h2>
         <p>
           <strong>Motto:</strong> “To Know Jesus and To Make Jesus Known.”  
@@ -114,11 +122,14 @@
           and to bring hope to every corner of society through love, service, and faith.
         </p>
       </article>
+
     </div>
   </section>
 
+  <!-- Footer partial -->
   <div id="footer"></div>
 
+  <!-- Load header/footer -->
   <script>
   async function loadPartial(id, file) {
     const res = await fetch(file);
