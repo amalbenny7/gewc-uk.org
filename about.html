@@ -8,84 +8,76 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Main CSS -->
+  <!-- Main Styles -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- Google Font -->
+  <!-- Minimal Vintage Font -->
   <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-
-  <!-- Page-Specific Styling -->
-  <link rel="stylesheet" href="css/about.css">
-
-  <script src="js/main.js" defer></script>
 </head>
 
 <body>
   <div id="header"></div>
 
-  <section class="about-hero">
+  <section class="about-section">
     <h1>About Us</h1>
-    <p>Learn more about the Greater Evangelism World Crusade UK — our journey, leadership, and mission.</p>
-  </section>
-
-  <section class="about-sections">
-    <div class="about-card">
+    <p class="subtitle">Learn more about the Greater Evangelism World Crusade UK — our journey, leadership, and mission.</p>
+    
+    <div class="about-block">
+      <h2>Our Mission</h2>
+      <p>The church began with a humble mission and has since grown to serve believers across the United Kingdom, spreading the message of Christ with passion and purpose.</p>
+    </div>
+    
+    <div class="about-block">
       <h2>Our History</h2>
       <p>The church began with a humble mission and has since grown to serve believers across the United Kingdom, spreading the message of Christ with passion and purpose.</p>
     </div>
 
-    <div class="about-card">
+    <div class="about-block">
       <h2>Governance</h2>
       <p>Our leadership structure is built on accountability and spiritual stewardship.</p>
       <ul>
-        <li><strong>International Director:</strong> [Name] – Oversees global coordination.</li>
-        <li><strong>Director:</strong> [Name] – Leads local operations and ministry outreach.</li>
-        <li><strong>Trustees:</strong> [Name(s)] – Provide governance and financial oversight.</li>
+        <li><strong>International Director:</strong> [Name] — Oversees global coordination.</li>
+        <li><strong>Director:</strong> [Name] — Leads local operations and ministry outreach.</li>
+        <li><strong>Trustees:</strong> [Name(s)] — Provide governance and financial oversight.</li>
       </ul>
     </div>
 
-    <div class="about-card">
+    <div class="about-block">
       <h2>Administration</h2>
-      <p>The administrative body ensures effective coordination across all ministry units and congregations.</p>
+      <p>Our administrative body ensures smooth coordination between ministries and local churches.</p>
       <ul>
-        <li><strong>Coordinating Minister:</strong> [Name]</li>
-        <li><strong>Cluster Pastor:</strong> [Name]</li>
-        <li><strong>Central Secretary:</strong> [Name]</li>
+        <li><strong>Coordinating Minister:</strong> [Name] — Role overview.</li>
+        <li><strong>Cluster Pastor:</strong> [Name] — Role overview.</li>
+        <li><strong>Central Secretary:</strong> [Name] — Role overview.</li>
       </ul>
     </div>
 
-    <div class="about-card">
+    <div class="about-block">
       <h2>Mission</h2>
-      <p>To know Jesus and to make Jesus known through evangelism, discipleship, and service.</p>
+      <p>To know Jesus and to make Jesus known through evangelism, discipleship, and community transformation.</p>
     </div>
 
-    <div class="about-card">
+    <div class="about-block">
       <h2>Mandate</h2>
-      <p>Proclaiming the Gospel and building disciples who live faithfully according to God’s Word.</p>
+      <p>Proclaiming the Gospel to all nations and guiding believers in living according to the Word of God.</p>
     </div>
 
-    <div class="about-card">
-      <h2>Motto</h2>
-      <p>“To Know Jesus and Make Jesus Known.”</p>
-    </div>
-
-    <div class="about-card">
-      <h2>Vision</h2>
-      <p>To raise a generation of believers passionate for Christ, empowered to impact lives and transform communities.</p>
+    <div class="about-block">
+      <h2>Motto & Vision</h2>
+      <p><strong>Motto:</strong> To Know Jesus and to Make Jesus Known.</p>
+      <p><strong>Vision:</strong> Raising disciples, transforming lives, and extending the kingdom of God across nations.</p>
     </div>
   </section>
 
   <div id="footer"></div>
 
   <script>
-    async function loadPartial(id, file) {
-      const res = await fetch(file);
-      document.getElementById(id).innerHTML = await res.text();
-    }
-    loadPartial("header", "assets/partials/header.html");
-    loadPartial("footer", "assets/partials/footer.html");
+  async function loadPartial(id, file) {
+    const res = await fetch(file);
+    document.getElementById(id).innerHTML = await res.text();
+  }
+  loadPartial("header", "assets/partials/header.html");
+  loadPartial("footer", "assets/partials/footer.html");
   </script>
 </body>
 </html>
