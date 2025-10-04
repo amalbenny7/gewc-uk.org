@@ -3,126 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UK Mission — GEWC UK</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    /* Page-specific styles */
-    .mission-hero {
-      height: 50vh;
-      background: url('https://source.unsplash.com/1600x900/?church,mission') center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-    .mission-hero .overlay {
-      background: rgba(0,0,0,0.5);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .mission-hero h1 {
-      color: var(--white);
-      font-size: 2.5rem;
-    }
-    .mission-content {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-    }
-    .mission-content h2 {
-      color: var(--dark);
-      margin-top: 1.8em;
-      font-size: 1.8rem;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 6px;
-    }
-    .mission-content p {
-      margin-top: 1em;
-    }
-    @media (max-width: 900px) {
-      .mission-hero { height: 35vh; }
-      .mission-hero h1 { font-size: 2rem; }
-    }
-  </style>
+  <title>About Us | GEWC UK</title>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Minimal Vintage Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+
+  <!-- Custom JS -->
+  <script src="js/main.js" defer></script>
 </head>
+
 <body>
-  <!-- Reuse header -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">
-        <img src="https://www.gewc-uk.org/asset/img/gewc-uk-logo3.png" alt="GEWC UK Logo">
-      </div>
-      <nav class="nav-links" id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="mission.html">UK Mission</a>
-        <a href="#">Charity Outreaches</a>
-        <a href="#">Sermons</a>
-        <a href="events.html">Events</a>
-        <a href="contact.html">Contact</a>
-        <a class="donate" href="#">Donate</a>
-      </nav>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
-    </div>
-  </header>
+  <!-- Header (Dynamic include) -->
+  <div id="header"></div>
 
-  <!-- Hero -->
-  <section class="mission-hero">
-    <div class="overlay">
-      <h1>UK Mission</h1>
+  <!-- About Us Page -->
+  <section class="section about">
+    <h1>About Us</h1>
+    <p class="intro-text">Learn more about the Greater Evangelism World Crusade UK — our journey, leadership, and mission.</p>
+
+    <div class="about-content">
+      <!-- Our History -->
+      <article class="info-card">
+        <h2>Our History</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. The church has grown over the years from humble beginnings, spreading the message of Christ throughout the UK.</p>
+      </article>
+
+      <!-- Governance -->
+      <article class="info-card">
+        <h2>Governance</h2>
+        <p>Our leadership consists of dedicated individuals serving with integrity and faith. Below are our international and local directors, trustees, and coordinators.</p>
+        <ul>
+          <li><strong>International Director:</strong> [Name] – Brief bio or message.</li>
+          <li><strong>Director:</strong> [Name] – Brief bio or message.</li>
+          <li><strong>Trustees:</strong> [Name(s)] – Brief description.</li>
+        </ul>
+      </article>
+
+      <!-- Administration -->
+      <article class="info-card">
+        <h2>Administration</h2>
+        <p>Our administrative body ensures smooth coordination between ministries and local churches.</p>
+        <ul>
+          <li><strong>Coordinating Minister:</strong> [Name] – Role overview.</li>
+          <li><strong>Cluster Pastor:</strong> [Name] – Role overview.</li>
+          <li><strong>Central Secretary:</strong> [Name] – Role overview.</li>
+        </ul>
+      </article>
+
+      <!-- Mission -->
+      <article class="info-card">
+        <h2>Mission</h2>
+        <p>To know Jesus and to make Jesus known through evangelism, discipleship, and community transformation.</p>
+      </article>
+
+      <!-- Mandate -->
+      <article class="info-card">
+        <h2>Mandate</h2>
+        <p>Proclaiming the Gospel to all nations and guiding believers in living according to the Word of God.</p>
+      </article>
+
+      <!-- Motto -->
+      <article class="info-card">
+        <h2>Motto</h2>
+        <p>“To Know Jesus and Make Jesus Known.”</p>
+      </article>
+
+      <!-- Vision -->
+      <article class="info-card">
+        <h2>Vision</h2>
+        <p>To raise a generation of believers passionate about Christ, empowered by the Spirit, and committed to transforming their communities.</p>
+      </article>
     </div>
   </section>
 
-  <!-- Mission Content -->
-  <section class="mission-content">
-    <h2>Our History</h2>
-    <p>[Placeholder text about the founding and growth of GEWC UK mission]</p>
+  <!-- Footer (Dynamic include) -->
+  <div id="footer"></div>
 
-    <h2>Governance</h2>
-    <p>[Profiles and roles of International Director, Director, Trustees]</p>
+  <!-- Load Header and Footer -->
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
 
-    <h2>Administration</h2>
-    <p>[Details on Coordinating Minister, Cluster Pastor, and Central Secretary]</p>
-
-    <h2>Mission</h2>
-    <p>[Statement of the UK mission focus, outreach, and purpose]</p>
-
-    <h2>Mandate</h2>
-    <p>[Mandate text goes here]</p>
-
-    <h2>Motto</h2>
-    <p>"To Know Jesus & To Make Jesus Known"</p>
-
-    <h2>Vision</h2>
-    <p>[Vision statement placeholder]</p>
-  </section>
-
-  <!-- Reuse footer -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="https://www.gewc-uk.org/asset/img/gewc-uk-logo3.png" alt="GEWC UK Logo">
-      </div>
-      <div class="footer-contact">
-        <p><strong>London:</strong> 77-79 Rushey Green, Catford, London, UK</p>
-        <p><strong>Sheffield:</strong> Placeholder Address, Sheffield, UK</p>
-        <p>Email: info@gewc-uk.org</p>
-        <p>Phone: +44(0)7392445326 | +44(0)7467154974</p>
-      </div>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2025 GEWC UK. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
-
+  <!-- Nav Menu Toggle -->
   <script>
     function toggleMenu(){
       document.getElementById("navMenu").classList.toggle("show");
