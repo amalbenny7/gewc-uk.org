@@ -37,25 +37,42 @@ header {
 
 .logo img { height: 45px; }
 
+/* Nav links */
 .nav-links { 
   display: flex; 
   gap: 20px; 
-  align-items: center;
+  align-items: center; 
 }
 
 .nav-links a, 
 .dropbtn { 
   color: var(--white); 
-  padding: 8px 10px; 
-  font-family: inherit;
+  font-size: 1rem; 
+  font-weight: 500; 
+  padding: 10px 14px; 
+  line-height: 1.6; 
+  display: flex; 
+  align-items: center;
+  white-space: nowrap; 
 }
 
+.nav-links a:hover, 
+.dropbtn:hover { 
+  color: var(--accent); 
+}
+
+/* Donate button */
 .nav-links .donate { 
   background: #800000; 
   border-radius: 4px; 
-  padding: 8px 12px; 
+  padding: 10px 18px; 
+  font-weight: 600; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 
+/* Hamburger */
 .hamburger { 
   display: none; 
   font-size: 1.5rem; 
@@ -64,40 +81,32 @@ header {
 }
 
 /* Dropdown Menu */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
+.dropdown { position: relative; }
+.dropbtn { background: none; border: none; font: inherit; cursor: pointer; }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: var(--dark);
-  min-width: 160px;
+  min-width: 180px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   z-index: 5;
 }
 
 .dropdown-content a {
+  background-color: var(--dark);   /* ✅ fixes purple background */
   color: var(--white);
   padding: 10px 14px;
   display: block;
   text-align: left;
 }
 
-.dropdown-content a:hover {
-  background-color: var(--accent);
+.dropdown-content a:hover { 
+  background-color: #800000;      /* ✅ deep red hover */
+  color: var(--white);
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+.dropdown:hover .dropdown-content { display: block; }
 
 /* Mobile Menu */
 .nav-links.show { 
@@ -109,6 +118,7 @@ header {
   left: 0; 
   width: 100%; 
   padding: 20px; 
+  gap: 15px;
 }
 
 .nav-links.show .dropdown-content {
@@ -117,6 +127,10 @@ header {
   min-width: 100%;
 }
 
+.nav-links.show .donate {
+  width: 100%;
+  text-align: center;
+}
 /* Hero */
 .hero {
   height: 80vh;
