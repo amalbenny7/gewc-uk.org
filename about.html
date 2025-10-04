@@ -5,89 +5,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us | GEWC UK</title>
 
-  <!-- Font Awesome CDN -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- Minimal Vintage Font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
 
-  <!-- Custom JS -->
+  <!-- Page-Specific Styling -->
+  <link rel="stylesheet" href="css/about.css">
+
   <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <!-- Header (Dynamic include) -->
   <div id="header"></div>
 
-  <!-- About Us Page -->
-  <section class="section about">
+  <section class="about-hero">
     <h1>About Us</h1>
-    <p class="intro-text">Learn more about the Greater Evangelism World Crusade UK — our journey, leadership, and mission.</p>
+    <p>Learn more about the Greater Evangelism World Crusade UK — our journey, leadership, and mission.</p>
+  </section>
 
-    <div class="about-content">
-      <!-- Our History -->
-      <article class="info-card">
-        <h2>Our History</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. The church has grown over the years from humble beginnings, spreading the message of Christ throughout the UK.</p>
-      </article>
+  <section class="about-sections">
+    <div class="about-card">
+      <h2>Our History</h2>
+      <p>The church began with a humble mission and has since grown to serve believers across the United Kingdom, spreading the message of Christ with passion and purpose.</p>
+    </div>
 
-      <!-- Governance -->
-      <article class="info-card">
-        <h2>Governance</h2>
-        <p>Our leadership consists of dedicated individuals serving with integrity and faith. Below are our international and local directors, trustees, and coordinators.</p>
-        <ul>
-          <li><strong>International Director:</strong> [Name] – Brief bio or message.</li>
-          <li><strong>Director:</strong> [Name] – Brief bio or message.</li>
-          <li><strong>Trustees:</strong> [Name(s)] – Brief description.</li>
-        </ul>
-      </article>
+    <div class="about-card">
+      <h2>Governance</h2>
+      <p>Our leadership structure is built on accountability and spiritual stewardship.</p>
+      <ul>
+        <li><strong>International Director:</strong> [Name] – Oversees global coordination.</li>
+        <li><strong>Director:</strong> [Name] – Leads local operations and ministry outreach.</li>
+        <li><strong>Trustees:</strong> [Name(s)] – Provide governance and financial oversight.</li>
+      </ul>
+    </div>
 
-      <!-- Administration -->
-      <article class="info-card">
-        <h2>Administration</h2>
-        <p>Our administrative body ensures smooth coordination between ministries and local churches.</p>
-        <ul>
-          <li><strong>Coordinating Minister:</strong> [Name] – Role overview.</li>
-          <li><strong>Cluster Pastor:</strong> [Name] – Role overview.</li>
-          <li><strong>Central Secretary:</strong> [Name] – Role overview.</li>
-        </ul>
-      </article>
+    <div class="about-card">
+      <h2>Administration</h2>
+      <p>The administrative body ensures effective coordination across all ministry units and congregations.</p>
+      <ul>
+        <li><strong>Coordinating Minister:</strong> [Name]</li>
+        <li><strong>Cluster Pastor:</strong> [Name]</li>
+        <li><strong>Central Secretary:</strong> [Name]</li>
+      </ul>
+    </div>
 
-      <!-- Mission -->
-      <article class="info-card">
-        <h2>Mission</h2>
-        <p>To know Jesus and to make Jesus known through evangelism, discipleship, and community transformation.</p>
-      </article>
+    <div class="about-card">
+      <h2>Mission</h2>
+      <p>To know Jesus and to make Jesus known through evangelism, discipleship, and service.</p>
+    </div>
 
-      <!-- Mandate -->
-      <article class="info-card">
-        <h2>Mandate</h2>
-        <p>Proclaiming the Gospel to all nations and guiding believers in living according to the Word of God.</p>
-      </article>
+    <div class="about-card">
+      <h2>Mandate</h2>
+      <p>Proclaiming the Gospel and building disciples who live faithfully according to God’s Word.</p>
+    </div>
 
-      <!-- Motto -->
-      <article class="info-card">
-        <h2>Motto</h2>
-        <p>“To Know Jesus and Make Jesus Known.”</p>
-      </article>
+    <div class="about-card">
+      <h2>Motto</h2>
+      <p>“To Know Jesus and Make Jesus Known.”</p>
+    </div>
 
-      <!-- Vision -->
-      <article class="info-card">
-        <h2>Vision</h2>
-        <p>To raise a generation of believers passionate about Christ, empowered by the Spirit, and committed to transforming their communities.</p>
-      </article>
+    <div class="about-card">
+      <h2>Vision</h2>
+      <p>To raise a generation of believers passionate for Christ, empowered to impact lives and transform communities.</p>
     </div>
   </section>
 
-  <!-- Footer (Dynamic include) -->
   <div id="footer"></div>
 
-  <!-- Load Header and Footer -->
   <script>
     async function loadPartial(id, file) {
       const res = await fetch(file);
@@ -95,13 +86,6 @@
     }
     loadPartial("header", "assets/partials/header.html");
     loadPartial("footer", "assets/partials/footer.html");
-  </script>
-
-  <!-- Nav Menu Toggle -->
-  <script>
-    function toggleMenu(){
-      document.getElementById("navMenu").classList.toggle("show");
-    }
   </script>
 </body>
 </html>
