@@ -1,71 +1,98 @@
-/* ABOUT US PAGE */
-.about-section {
-  background: var(--light);
-  color: var(--text);
-  font-family: 'Prata', serif;
+/* ---------- ABOUT PAGE — minimal, elegant, responsive ---------- */
+/* Add this at the end of css/style.css */
+
+:root {
+  --dark: #4a1d1d;      /* header/donate */
+  --accent: #8a5f68;    /* subtle accent */
+  --muted: #6b5b5b;     /* body muted */
+  --light-bg: #efe9f1;  /* page base */
+  --card-white: #ffffff;
 }
 
+/* page wrapper */
+.about-section {
+  background: var(--light-bg);
+  color: var(--muted);
+  font-family: 'Prata', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* banner (title + subtitle) */
 .about-banner {
   text-align: center;
-  padding: 80px 20px 40px;
-  background: linear-gradient(180deg, #4a1d1d 0%, #a87f8f 90%);
-  color: var(--white);
+  padding: 56px 20px 28px;
+  background: transparent; /* keep header color consistent — you can uncomment a gradient if needed */
 }
-
 .about-banner h1 {
-  font-size: 2.6rem;
-  margin-bottom: 10px;
+  margin: 0 0 8px;
+  font-size: 2.8rem;
+  color: var(--dark);
+  line-height: 1.05;
+  letter-spacing: -0.5px;
 }
-
 .about-banner p {
-  font-size: 1.1rem;
-  color: #f3e8ef;
+  margin: 0 auto;
+  max-width: 980px;
+  color: #554848;
+  font-size: 1.05rem;
+  opacity: 0.95;
 }
 
+/* container — keeps content narrow and centered */
 .about-container {
-  max-width: 950px;
-  margin: 60px auto;
-  padding: 0 20px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  max-width: 980px;
+  margin: 36px auto 80px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
 }
 
+/* card style — soft, modern, minimal */
 .about-card {
-  background: #fff;
+  background: var(--card-white);
   border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 4px 10px rgba(74, 29, 29, 0.15);
-  border-left: 5px solid var(--accent);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 26px;
+  box-shadow: 0 6px 20px rgba(74,29,29,0.06);
+  border: 1px solid rgba(74,29,29,0.04);
+  transition: transform .22s ease, box-shadow .22s ease;
 }
-
 .about-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(74,29,29,0.10);
 }
 
 .about-card h2 {
+  margin: 0 0 10px;
   color: var(--dark);
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+  font-size: 1.45rem;
+  letter-spacing: -0.3px;
 }
-
-.about-card p, 
-.about-card ul {
+.about-card p {
+  margin: 0 0 12px;
+  color: #5a4e4f;
+  line-height: 1.72;
   font-size: 1rem;
-  line-height: 1.8;
-  color: var(--muted);
 }
-
 .about-card ul {
-  list-style: disc;
-  padding-left: 20px;
-  margin-top: 10px;
+  margin: 8px 0 0 18px;
+  color: #4e4546;
+  line-height: 1.7;
+  font-size: 0.98rem;
 }
 
-@media (max-width: 768px) {
+/* spacing tweak for long lists */
+.about-card ul li + li { margin-top: 6px; }
+
+/* small screens */
+@media (max-width: 820px) {
+  .about-banner { padding: 40px 18px 20px; }
   .about-banner h1 { font-size: 2rem; }
-  .about-container { padding: 0 15px 40px; }
-  .about-card { padding: 20px; }
+  .about-banner p { font-size: 0.98rem; }
+  .about-card { padding: 18px; border-radius: 10px; }
+  .about-container { margin: 18px auto 40px; gap: 18px; }
 }
+
+/* optional: anchor link spacing if you create a contents nav */
+.section-anchor { scroll-margin-top: 84px; } /* accounts for sticky header */
