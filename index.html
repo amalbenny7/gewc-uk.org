@@ -31,23 +31,37 @@
 
 <body>
   <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">
-        <img src="https://www.gewc-uk.org/asset/img/gewc-uk-logo3.png" alt="GEWC UK Logo">
-      </div>
-      <nav class="nav-links" id="navMenu">
-        <a href="#">Home</a>
-        <a href="mission.html">UK Mission</a>
-        <a href="#">Charity Outreaches</a>
-        <a href="#">Sermons</a>
-        <a href="events.html">Events</a>
-        <a href="#">Contact</a>
-        <a class="donate" href="#">Donate</a>
-      </nav>
-      <div class="hamburger" onclick="toggleMenu()">☰</div>
+<header>
+  <div class="nav-container">
+    <div class="logo">
+      <img src="https://www.gewc-uk.org/asset/img/gewc-uk-logo3.png" alt="GEWC UK Logo">
     </div>
-  </header>
+
+    <nav class="nav-links" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="worship.html">Our Church Services</a>
+      <a href="sermons.html">Sermons</a>
+
+      <!-- Dropdown for Events and Activities -->
+      <div class="dropdown">
+        <button class="dropbtn">Events and Activities ▾</button>
+        <div class="dropdown-content">
+          <a href="events-london.html">London</a>
+          <a href="events-sheffield.html">Sheffield</a>
+        </div>
+      </div>
+
+      <a href="testimonies.html">Our Testimonies</a>
+      <a href="policies.html">Our Policies</a>
+      <a href="contact.html">Contact Us</a>
+      <a class="donate" href="donate.html">Donate</a>
+    </nav>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+  </div>
+</header>
+
 
   <!-- Hero -->
   <section class="hero">
