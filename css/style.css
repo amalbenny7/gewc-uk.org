@@ -163,6 +163,11 @@ header {
 .event-card h3 { padding: 15px; color: var(--dark); }
 .event-card p { padding: 0 15px 15px; font-size: 0.95rem; color: var(--muted); }
 .btn { display: inline-block; margin: 0 15px 15px; padding: 10px 20px; background: var(--dark); color: var(--white); border-radius: 4px; }
+.view-all-btn {
+  text-align: center;
+  margin-top: 40px; /* ⬅ adds vertical spacing after events */
+}
+
 
 /* Sermon */
 .sermon-video { display: flex; justify-content: center; margin-top: 20px; }
