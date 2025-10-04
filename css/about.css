@@ -1,60 +1,71 @@
+/* ABOUT US PAGE */
 .about-section {
-  max-width: 900px;
-  margin: 80px auto;
-  padding: 0 20px;
+  background: var(--light);
   color: var(--text);
+  font-family: 'Prata', serif;
 }
 
-.about-section h1 {
+.about-banner {
   text-align: center;
-  color: var(--dark);
-  font-size: 2.4rem;
+  padding: 80px 20px 40px;
+  background: linear-gradient(180deg, #4a1d1d 0%, #a87f8f 90%);
+  color: var(--white);
+}
+
+.about-banner h1 {
+  font-size: 2.6rem;
   margin-bottom: 10px;
 }
 
-.about-section .subtitle {
-  text-align: center;
-  font-size: 1rem;
-  color: var(--muted);
-  margin-bottom: 50px;
+.about-banner p {
+  font-size: 1.1rem;
+  color: #f3e8ef;
 }
 
-.about-block {
-  margin-bottom: 50px;
-  border-left: 4px solid var(--dark);
-  padding-left: 20px;
-  animation: fadeIn 0.5s ease;
+.about-container {
+  max-width: 950px;
+  margin: 60px auto;
+  padding: 0 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.about-block h2 {
+.about-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(74, 29, 29, 0.15);
+  border-left: 5px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.about-card h2 {
+  color: var(--dark);
   font-size: 1.4rem;
-  color: var(--dark);
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.about-block p, 
-.about-block ul {
+.about-card p, 
+.about-card ul {
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--muted);
 }
 
-.about-block ul {
+.about-card ul {
+  list-style: disc;
+  padding-left: 20px;
   margin-top: 10px;
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 768px) {
-  .about-section {
-    margin: 60px auto;
-  }
-  .about-block {
-    border-left: 3px solid var(--dark);
-    padding-left: 15px;
-  }
+  .about-banner h1 { font-size: 2rem; }
+  .about-container { padding: 0 15px 40px; }
+  .about-card { padding: 20px; }
 }
