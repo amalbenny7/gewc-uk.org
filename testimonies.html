@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Testimonies | GEWC UK</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main + Events CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/events.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+
+  <section class="testimonies-hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Testimonies</h1>
+        <p>Celebrate the powerful works of God through life-changing testimonies from GEWC UK.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="live-section">
+    <div class="section-header">
+      <h2>Life-Changing Testimonies</h2>
+      <p>Be inspired by stories of healing, transformation, and faith shared by our church family.</p>
+    </div>
+
+    <div class="iframe-grid">
+      <div class="iframe-card">
+        <iframe src="https://www.youtube.com/embed/8BvAq9IB7lA" title="Testimony 1" allowfullscreen></iframe>
+        <h3>Healing Testimony</h3>
+        <p>Listen to how faith and prayer brought complete healing to one of our members.</p>
+      </div>
+
+      <div class="iframe-card">
+        <iframe src="https://www.youtube.com/embed/gSuwmBu8u-8" title="Testimony 2" allowfullscreen></iframe>
+        <h3>Financial Breakthrough</h3>
+        <p>Discover how trusting God opened unexpected doors of provision.</p>
+      </div>
+
+      <div class="iframe-card">
+        <iframe src="https://www.youtube.com/embed/Yj2b8aVgJGo" title="Testimony 3" allowfullscreen></iframe>
+        <h3>Family Restoration</h3>
+        <p>See how God reunited a broken family through faith and forgiveness.</p>
+      </div>
+
+      <div class="iframe-card">
+        <iframe src="https://www.youtube.com/embed/6VohpPKmYec" title="Testimony 4" allowfullscreen></iframe>
+        <h3>Deliverance Testimony</h3>
+        <p>Witness a powerful story of deliverance and spiritual freedom in Christ.</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>
