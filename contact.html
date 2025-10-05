@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | GEWC UK</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <section class="contact-section">
+  <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Feel free to reach out to either of our UK churches or send us a direct message below.</p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- Left side -->
+    <div class="contact-info">
+      <img class="contact-image" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60" alt="Church gathering">
+
+      <div class="church-location">
+        <h2>London Church</h2>
+        <p><i class="fas fa-location-dot"></i> 77-79 Rushey Green, Catford, London, United Kingdom</p>
+        <p><i class="fas fa-envelope"></i> info@gewc-uk.org</p>
+        <p><i class="fas fa-phone"></i> +44(0)7392 445326 / +44(0)7467 154974</p>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps?q=77-79+Rushey+Green,+Catford,+London,+UK&output=embed"
+            width="100%" height="220" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="church-location">
+        <h2>Sheffield Church</h2>
+        <p><i class="fas fa-location-dot"></i> Placeholder Address, Sheffield, United Kingdom</p>
+        <p><i class="fas fa-envelope"></i> info@gewc-uk.org</p>
+        <p><i class="fas fa-phone"></i> +44(0)0000 000000</p>
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps?q=Sheffield,+UK&output=embed"
+            width="100%" height="220" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side -->
+    <div class="contact-form-wrapper tall-form">
+      <h2>Send Us a Message</h2>
+      <form action="https://formsubmit.co/jesuscorner2024@gmail.com" method="POST" class="contact-form">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://gewc-uk.org/thankyou.html">
+
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" name="phone">
+
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="8" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Call section -->
+  <section class="contact-phone">
+    <div class="contact-phone-container">
+      <div class="phone-icon"><i class="fas fa-phone"></i></div>
+      <div class="phone-details">
+        <h3>Call</h3>
+        <p>+44 (0)7392 445326 – Church Secretary</p>
+        <p>+44 (0)7467 154974 – Mission Coordinator</p>
+        <p>+44 (0)7795 015848 – BOT</p>
+        <p>+44 (0)7724 404308 – BOT</p>
+        <p>+44 (0)7853 417340 – BOT</p>
+        <p>+44 (0)7795 418457 – BOT</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>
