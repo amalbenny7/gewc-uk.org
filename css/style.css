@@ -134,7 +134,7 @@ header {
 /* Hero */
 .hero {
   height: 80vh;
-  background: url('https://i0.wp.com/www.culturalwednesday.co.uk/wp-content/uploads/2017/07/St-Pancras-Old-Church.jpg?resize=1440%2C810&ssl=1') center/cover no-repeat;
+  background: url('../images/hero.webp') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
