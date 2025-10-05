@@ -20,8 +20,8 @@
 
 /* Specific Hero Backgrounds */
 .live-hero { background-image: url('../images/edward-cisneros-QSa-uv4WJ0k-unsplash.jpg'); }
-.sermon-hero { background-image: url('../images/sermon.jpg'); }
-.testimonies-hero { background-image: url('../images/testimonies.jpg'); }
+.sermon-hero { background-image: url('../images/sermon.webp'); }
+.testimonies-hero { background-image: url('../images/testimonies.webp'); }
 .contact-hero { background-image: url('../images/hero-contact.jpg'); }
 
 /* Hero Overlay + Text */
