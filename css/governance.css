@@ -7,14 +7,6 @@
   --white: #fff;
 }
 
-/* Hero override for governance */
-.governance-hero {
-  background-image: url('../images/hero-governance.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
 /* Section base */
 .governance-section {
   background: var(--light-bg);

@@ -7,6 +7,7 @@
 .donate-hero,
 .contact-hero,
 .sermon-hero,
+.governance-hero,
 .testimonies-hero {
   width: 100%;
   min-height: 60vh;
@@ -28,6 +29,7 @@
 .sermon-hero { background-image: url('../images/sermon.jpg'); }
 .testimonies-hero { background-image: url('../images/testimonies.jpg'); }
 .contact-hero { background-image: url('../images/hero-contact.jpg'); }
+.governance-hero { background-image: url('../images/governance.webp'); }
 
 /* Hero Overlay + Text */
 .hero-overlay {
