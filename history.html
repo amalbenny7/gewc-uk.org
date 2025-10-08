@@ -5,61 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our History | GEWC UK</title>
 
+  <!-- Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/events.css">
+  <link rel="stylesheet" href="css/history.css">
   <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
-
-  <style>
-    .history-section {
-      background: #f6f2f3;
-      color: #4a1d1d;
-      font-family: 'Prata', serif;
-      padding: 80px 20px;
-    }
-
-    .history-content {
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
-
-    .history-content h2 {
-      font-size: 1.8rem;
-      color: #4a1d1d;
-      margin-top: 50px;
-      margin-bottom: 15px;
-    }
-
-    .history-content p {
-      margin-bottom: 18px;
-      color: #5b4c4c;
-    }
-
-    blockquote {
-      margin-top: 30px;
-      padding-left: 20px;
-      border-left: 4px solid #8a5f68;
-      font-style: italic;
-      color: #3d2b2b;
-    }
-
-    @media (max-width: 768px) {
-      .history-content {
-        font-size: 1rem;
-        padding: 0 10px;
-      }
-      .history-content h2 {
-        font-size: 1.4rem;
-      }
-    }
-  </style>
 </head>
 <body>
+  <!-- Header -->
   <div id="header"></div>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="governance-hero">
     <div class="hero-overlay">
       <div class="hero-text">
@@ -91,8 +48,10 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <div id="footer"></div>
 
+  <!-- JS Partials -->
   <script>
     async function loadPartial(id, file) {
       const res = await fetch(file);

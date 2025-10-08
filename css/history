@@ -1,0 +1,47 @@
+/* ===== OUR HISTORY PAGE FIX ===== */
+.history-section {
+  background: #f6f2f3;
+  padding: 80px 20px;
+  font-family: 'Prata', serif;
+  color: #4a1d1d;
+}
+
+.history-content {
+  max-width: 950px;
+  margin: 0 auto;
+  line-height: 1.85;
+  font-size: 1.05rem;
+  color: #4a1d1d;
+}
+
+.history-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3b1919;
+  margin: 50px 0 15px;
+}
+
+.history-content p {
+  margin-bottom: 20px;
+  color: #4b3838;
+}
+
+.history-content blockquote {
+  margin-top: 40px;
+  padding-left: 20px;
+  border-left: 4px solid #8a5f68;
+  font-style: italic;
+  color: #3b2b2b;
+}
+
+@media (max-width: 768px) {
+  .history-section {
+    padding: 50px 15px;
+  }
+  .history-content {
+    font-size: 1rem;
+  }
+  .history-content h2 {
+    font-size: 1.5rem;
+  }
+}
