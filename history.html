@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our History | GEWC UK</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/events.css">
+  <link rel="stylesheet" href="css/governance.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="governance-hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Our History</h1>
+        <p>Tracing the journey of Greater Evangelism World Crusade UK — from its divine beginnings to its mission today.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="governance-section">
+    <div class="profiles-container" style="flex-direction: column;">
+
+      <article class="profile-card" style="max-width: 900px; margin: auto;">
+        <div class="profile-content">
+          <h2>The Birth of a Vision</h2>
+          <p>The Greater Evangelism World Crusade (GEWC) began in 1969 through the visionary leadership of <strong>Apostle Geoffrey Dabibi Numbere (1944–2014)</strong>. A divine encounter stirred his heart with an unquenchable passion to take the Gospel of Jesus Christ to every part of Nigeria and beyond. From humble beginnings in Port Harcourt, Rivers State, GEWC grew into a dynamic indigenous Pentecostal movement defined by evangelism, holiness, and discipleship.</p>
+
+          <h2>Establishing GEWC in the United Kingdom</h2>
+          <p>The work of <strong>GEWC UK</strong> traces back to Apostle Numbere’s missionary visits to the United Kingdom in <strong>1999</strong> and <strong>2000</strong>. During these visits, he inspired three brethren residing in the UK to establish the ministry on British soil. United by faith and prayer, they began laying the foundations for registration and formation of a local church.</p>
+          <p>In <strong>2003</strong>, GEWC UK was officially registered as a charity, marking the first legal step in its establishment. For several years, the brethren maintained prayer meetings and fellowship remotely until <strong>2008</strong>, when an ordained pastor arrived from Nigeria to coordinate the work. The ministry was formally inaugurated in <strong>2009</strong>, and regular fellowship meetings began to take place in members’ homes.</p>
+
+          <h2>Growth and Expansion</h2>
+          <p>Under God’s guidance, GEWC UK steadily grew. As membership increased, the church moved to a more accessible worship venue at <strong>77–79 Rushey Green, Catford, London</strong>. Apostle Numbere and his wife visited one of these early fellowships and ordained four pastors, establishing a strong spiritual foundation for the UK mission.</p>
+          <p>Before the COVID-19 pandemic, the ministry experienced remarkable growth, especially among students from Nigeria and other nations studying in the UK. Many of these students served faithfully and contributed to the ministry’s development. The pandemic temporarily shifted worship to online platforms, yet the church remained united, continuing its annual Reunion Fellowship and prayer meetings.</p>
+
+          <h2>Today and Beyond</h2>
+          <p>With the recent influx of healthcare professionals and new ministers into the UK, GEWC has entered a new phase of growth. The ministry now operates a thriving branch in <strong>Sheffield</strong> alongside the London congregation, while members across England, Wales, and Scotland connect regularly through online services.</p>
+          <p>From three praying brethren to a nationwide mission, GEWC UK stands as a testimony of God’s faithfulness and grace. Guided by the International Headquarters in Nigeria under the leadership of <strong>Pastor Isaac Valentine Olori</strong>, the mission continues to uphold Apostle Numbere’s founding vision — to win souls, disciple believers, and proclaim Jesus Christ across the United Kingdom and beyond.</p>
+
+          <blockquote style="margin-top:20px; font-style:italic; color:#444;">
+            “The earth shall be filled with the knowledge of the glory of the Lord, as the waters cover the sea.” – Habakkuk 2:14
+          </blockquote>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>
