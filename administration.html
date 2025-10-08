@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Administration | GEWC UK</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/events.css">
+  <link rel="stylesheet" href="css/governance.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="governance-hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Administration</h1>
+        <p>Meet the dedicated administrators leading Greater Evangelism World Crusade UK with wisdom, excellence, and grace.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Administration Section -->
+  <section class="governance-section">
+    <div class="profiles-container">
+
+      <!-- Pastor (Dr.) N.J. West -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/Pastor West.jfif alt="Pastor (Dr.) N.J. West">
+        </div>
+        <div class="profile-content">
+          <h2>Pastor (Dr.) N.J. West</h2>
+          <h4>Coordinating Mission Minister & Minister in Charge, GEWC London Church</h4>
+          <p>Pastor (Dr.) N.J. West serves as the Coordinating Mission Minister and Minister in Charge of Greater Evangelism World Crusade (GEWC) London Church. Professionally, he is a Dental Surgeon, but beyond his vocation, he is a passionate minister of the Gospel devoted to advancing the Kingdom of God through evangelism, discipleship, and practical Christian living.</p>
+          <p>Pastor West has walked faithfully with the Lord for over 28 years, growing in grace and in the knowledge of God’s Word. His life and ministry reflect a deep love for Jesus and a genuine enthusiasm for sharing the Gospel. He is especially passionate about outreaches, mentoring, and modelling Christian character in everyday life.</p>
+          <p>He operates strongly in the gifts of the Holy Spirit, combining sound biblical teaching with spiritual sensitivity to guide and empower believers. His leadership is marked by humility, compassion, and a commitment to nurturing spiritual growth within the church community. Under his care, GEWC London Church continues to flourish as a vibrant centre for worship, evangelism, and fellowship.</p>
+          <p>Beyond the pulpit, Pastor West is family-oriented and deeply community-minded. He enjoys spending quality time with his family and engaging with children, the elderly, and the vulnerable. His ministry extends beyond the church into conflict resolution and community support, embodying Christ’s compassion in practical ways.</p>
+          <p>Pastor West enjoys swimming, football, and keeping informed on global events. His awareness of social and political issues enriches his perspective as both a preacher and a community leader. Through his ministry and lifestyle, he continues to inspire believers to live purposefully, walk in love, and remain committed to the Gospel of Jesus Christ.</p>
+        </div>
+      </article>
+
+      <!-- Pastor Timothy Igani -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/Pastor Timothy 2.jfif" alt="Pastor Timothy Igani">
+        </div>
+        <div class="profile-content">
+          <h2>Pastor Timothy Igani</h2>
+          <h4>Sheffield Cluster Pastor</h4>
+          <p>Pastor Timothy Igani serves faithfully as the Sheffield Church Cluster Pastor of GEWC UK. A devoted servant of God, he is passionate about teaching the Word, nurturing believers in their spiritual journey, and fostering unity and growth within the body of Christ. His ministry is marked by humility, compassion, and a deep desire to see lives transformed through God’s Word.</p>
+          <p>Professionally, Pastor Timothy is a trained Accountant who currently works in the healthcare sector in the UK. His background in finance and management brings structure, discipline, and excellence to his pastoral and administrative responsibilities.</p>
+          <p>As Cluster Pastor in Sheffield, he provides spiritual oversight, pastoral care, and leadership to the congregation, ensuring members are strengthened in faith and actively engaged in fulfilling the church’s mission. He works closely with the wider leadership to promote discipleship, accountability, and community impact.</p>
+          <p>Pastor Timothy is known for his calm disposition, integrity, and wisdom. He continues to serve diligently, combining professional expertise and spiritual calling to advance the Kingdom of God and support the vision of GEWC UK.</p>
+        </div>
+      </article>
+
+      <!-- Mr. Ledum Promise-Birah -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ledom.jpeg" alt="Mr. Ledum Promise-Birah">
+        </div>
+        <div class="profile-content">
+          <h2>Mr. Ledum Promise-Birah</h2>
+          <h4>General Secretary, GEWC UK</h4>
+          <p>Mr. Ledum Promise-Birah currently serves as the General Secretary of GEWC UK Church. He has been a dedicated member of the ministry from a young age, having experienced a remarkable transformation through the Word of God and the power of the Holy Spirit.</p>
+          <p>Professionally, he is a Safety Engineer, known for his commitment to excellence and integrity in his work. Ledum is deeply passionate about helping believers grow in their love for Jesus Christ and discover their unique purpose in Him.</p>
+          <p>His vision is for the church to be a vibrant community where love, truth, and compassion radiate beyond the walls—impacting society until “the earth is filled with the knowledge of the glory of the Lord as the waters cover the sea” (Habakkuk 2:14).</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>
