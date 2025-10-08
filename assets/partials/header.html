@@ -7,7 +7,17 @@
 
     <nav class="nav-links" id="navMenu">
       <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
+
+      <!-- Dropdown for About Us -->
+      <div class="dropdown">
+        <button class="dropbtn">About Us ▾</button>
+        <div class="dropdown-content">
+          <a href="about-history.html">Our History</a>
+          <a href="about-governance.html">Governance</a>
+          <a href="about-administration.html">Administration</a>
+        </div>
+      </div>
+
       <a href="worship.html">Church Services</a>
       <a href="sermons.html">Sermons</a>
 
@@ -29,8 +39,9 @@
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
-  <script>
-    function toggleMenu(){
-      document.getElementById("navMenu").classList.toggle("show");
-    }
-  </script>
+
+<script>
+  function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("show");
+  }
+</script>
