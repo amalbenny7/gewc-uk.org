@@ -7,38 +7,36 @@
   --white: #fff;
 }
 
-/* ===============================
-   GOVERNANCE SECTION BASE
-================================== */
+/* BASE */
 .governance-section {
   background: var(--light-bg);
   padding: 70px 20px;
   font-family: 'Prata', serif;
 }
 
-/* ===============================
-   CONTAINER LAYOUT
-================================== */
+/* CONTAINERS */
 .profiles-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 420px));
   column-gap: 40px;
-  row-gap: 70px; /* ensures proper vertical spacing */
+  row-gap: 70px;
   justify-content: center;
   align-items: start;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* ===============================
-   PROFILE CARD
-================================== */
+.profiles-container + .profiles-container {
+  margin-top: 80px; /* gap between founders and trustees */
+}
+
+/* CARDS */
 .profile-card {
   background: var(--card-bg);
   border-radius: 14px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
   overflow: hidden;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -50,12 +48,10 @@
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
-/* ===============================
-   IMAGE AREA
-================================== */
+/* IMAGES */
 .profile-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4/3;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -70,22 +66,20 @@
   display: block;
 }
 
-/* ===============================
-   CONTENT AREA
-================================== */
+/* TEXT CONTENT */
 .profile-content {
   padding: 25px 22px 30px;
   color: var(--muted);
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
   gap: 10px;
+  flex: 1 1 auto;
 }
 
 .profile-content h2 {
   color: var(--dark);
   font-size: 1.4rem;
-  margin: 0 0 2px;
+  margin: 0;
   line-height: 1.2;
 }
 
@@ -101,12 +95,9 @@
   font-size: 0.98rem;
   line-height: 1.68;
   text-align: justify;
-  color: var(--muted);
 }
 
-/* ===============================
-   RESPONSIVE DESIGN
-================================== */
+/* RESPONSIVE */
 @media (max-width: 992px) {
   .profiles-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -119,7 +110,7 @@
   }
 
   .profile-image {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3/2;
   }
 }
 
@@ -149,6 +140,6 @@
   }
 
   .profile-image {
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 3/2;
   }
 }
