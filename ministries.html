@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Ministries | GEWC UK</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/events.css">
+  <link rel="stylesheet" href="css/governance.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="governance-hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Our Ministries</h1>
+        <p>Empowered by the Holy Spirit, each ministry serves to build lives, strengthen faith, and expand God’s Kingdom.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ministries Section -->
+  <section class="governance-section">
+    <div class="profiles-container">
+
+      <!-- Evangelism -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ministries-evangelism.jpg" alt="Evangelism Ministry">
+        </div>
+        <div class="profile-content">
+          <h2>Evangelism Ministry</h2>
+          <p>The heart of Greater Evangelism World Crusade beats for soul-winning. Our Evangelism Ministry reaches communities through street outreaches, missions, and personal witnessing — proclaiming the transforming power of Jesus Christ. The team is committed to ensuring every believer actively participates in spreading the Gospel, both in the UK and beyond.</p>
+        </div>
+      </article>
+
+      <!-- Children’s Ministry -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ministries-children.jpg" alt="Children’s Ministry">
+        </div>
+        <div class="profile-content">
+          <h2>Children’s Ministry</h2>
+          <p>Our Children’s Ministry nurtures young hearts in the love and knowledge of Christ. Through interactive Bible study, worship, and creative learning, children are encouraged to grow in faith, obedience, and godly character. The team works closely with parents to raise a generation that loves God and lives out His Word.</p>
+        </div>
+      </article>
+
+      <!-- Youth Ministry -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ministries-youth.jpg" alt="Youth Ministry">
+        </div>
+        <div class="profile-content">
+          <h2>Youth Ministry</h2>
+          <p>The Youth Ministry serves as a vibrant space for young adults to encounter God, build purpose, and discover their spiritual gifts. Regular meetings, mentorship programs, and workshops focus on leadership, discipleship, and evangelism — empowering young people to live boldly for Christ in their studies, careers, and daily lives.</p>
+        </div>
+      </article>
+
+      <!-- Women’s Fellowship -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ministries-women.jpg" alt="Women’s Fellowship">
+        </div>
+        <div class="profile-content">
+          <h2>Women’s Fellowship</h2>
+          <p>The Women’s Fellowship unites women across GEWC UK for prayer, service, and spiritual growth. It provides a supportive environment where women encourage one another through the Word, nurture families, and engage in outreach. Their activities include seminars, counselling, and welfare support within the church and local communities.</p>
+        </div>
+      </article>
+
+      <!-- Men’s Fellowship -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ministries-men.jpg" alt="Men’s Fellowship">
+        </div>
+        <div class="profile-content">
+          <h2>Men’s Fellowship</h2>
+          <p>The Men’s Fellowship equips men to be godly leaders in their homes, workplaces, and communities. Through prayer groups, fellowship meetings, and mentoring sessions, men are strengthened in faith, encouraged to live with integrity, and challenged to uphold righteousness in every area of life.</p>
+        </div>
+      </article>
+
+      <!-- Music Ministry -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ministries-music.jpg" alt="Music Ministry">
+        </div>
+        <div class="profile-content">
+          <h2>Music Ministry</h2>
+          <p>Worship lies at the centre of our fellowship. The Music Ministry leads the congregation in heartfelt praise and worship, inspiring an atmosphere of reverence and joy in God’s presence. Members are trained in musical excellence and spiritual discipline to minister through song with passion and purity.</p>
+        </div>
+      </article>
+
+      <!-- Welfare & Hospitality -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/ministries-welfare.jpg" alt="Welfare and Hospitality Ministry">
+        </div>
+        <div class="profile-content">
+          <h2>Welfare & Hospitality Ministry</h2>
+          <p>This ministry embodies Christ’s compassion through practical service. It supports members in times of need, organizes church events, and ensures that every visitor experiences warmth and belonging. The team coordinates care initiatives and fosters unity through kindness, generosity, and hospitality.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>
