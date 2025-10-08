@@ -1,4 +1,4 @@
-:root {
+:root{
   --dark: #4a1d1d;
   --accent: #8a5f68;
   --muted: #5b4c4c;
@@ -14,37 +14,41 @@
   font-family: 'Prata', serif;
 }
 
-/* Fixed, centered, responsive container */
+/* Grid container — fixed visual card width, centered */
 .profiles-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 420px)); /* keeps cards uniform */
+  gap: 32px;
   justify-content: center;
-  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
 
-/* Profile card */
+/* Card — stretch to fill grid cell and equalize height with flex */
 .profile-card {
-  width: 480px; /* fixed ideal width */
   background: var(--card-bg);
   border-radius: 14px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.07);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
   display: flex;
   flex-direction: column;
+  height: 100%;            /* allow grid cell to control height */
+  min-height: 420px;       /* reasonable minimum so short bios do not look tiny */
+  max-width: 420px;        /* match grid cell max */
 }
 
-.profile-card:hover {
+/* Hover */
+.profile-card:hover{
   transform: translateY(-6px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
 }
 
-/* Image container */
-.profile-image {
+/* Image area — fixed visual height, consistent ratio, no blowouts */
+.profile-image{
   width: 100%;
-  height: 340px;
+  flex: 0 0 260px;         /* fixed image block height on desktop */
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -52,76 +56,76 @@
   background: #e6dede;
 }
 
-.profile-image img {
+.profile-image img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;       /* crops but preserves aspect and fills */
+  display: block;
 }
 
-/* Text content */
-.profile-content {
-  padding: 25px 22px 30px;
+/* Content area — flex to fill remaining space so cards match heights */
+.profile-content{
+  padding: 22px 20px 28px;
   color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 auto;
 }
 
-.profile-content h2 {
+/* Headings and text */
+.profile-content h2{
   color: var(--dark);
-  font-size: 1.5rem;
-  margin-bottom: 4px;
-  letter-spacing: -0.3px;
+  font-size: 1.4rem;
+  margin: 0 0 2px;
+  line-height: 1.1;
 }
 
-.profile-content h4 {
+.profile-content h4{
   color: var(--accent);
-  font-size: 1.05rem;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  margin: 0 0 10px;
   font-weight: 600;
 }
 
-.profile-content p {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 10px;
+.profile-content p{
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.68;
+  text-align: justify;
+  color: var(--muted);
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .profile-card {
-    width: 90%;
-    max-width: 500px;
+/* Make sure long bios do not push layout unpredictably:
+   allow the content block to scroll inside card only on small devices
+   (desktop shows full text as requested) */
+@media (max-width: 480px) {
+  .profile-card { min-height: 0; }
+  .profile-image { flex: 0 0 200px; }
+}
+
+/* Tablet / Mobile responsiveness */
+@media (max-width: 992px) {
+  .profiles-container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 26px;
+    padding: 0 6px;
   }
-  .profile-image {
-    height: 300px;
-  }
+  .profile-card { max-width: 620px; }
+  .profile-image { flex: 0 0 240px; }
 }
 
 @media (max-width: 768px) {
-  .profile-card {
-    width: 100%;
-    max-width: 480px;
-  }
-  .profile-image {
-    height: 280px;
-  }
-  .profile-content h2 {
-    font-size: 1.3rem;
-  }
-  .profile-content p {
-    font-size: 0.95rem;
-  }
+  .governance-section { padding: 50px 14px; }
+  .profiles-container { gap: 20px; }
+  .profile-image { flex: 0 0 220px; }
+  .profile-content h2 { font-size: 1.25rem; }
+  .profile-content p { font-size: 0.95rem; }
 }
 
-@media (max-width: 480px) {
-  .governance-section {
-    padding: 50px 15px;
-  }
-  .profiles-container {
-    gap: 28px;
-  }
-  .profile-card {
-    width: 100%;
-  }
-  .profile-image {
-    height: 220px;
-  }
+/* Extra small */
+@media (max-width: 420px) {
+  .profiles-container { grid-template-columns: 1fr; }
+  .profile-image { flex: 0 0 180px; }
+  .profile-card { min-height: auto; }
 }
