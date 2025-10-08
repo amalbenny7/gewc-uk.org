@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Governance | GEWC UK</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main + Governance CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/governance.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <section class="sermon-hero governance-hero">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Governance</h1>
+        <p>Meet the visionary leaders guiding Greater Evangelism World Crusade UK in faith, service, and integrity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Governance Profiles -->
+  <section class="governance-section">
+    <div class="profiles-container">
+
+      <!-- Apostle Geoffrey Dabibi Numbere -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/placeholder-founder.jpg" alt="Apostle Geoffrey Dabibi Numbere">
+        </div>
+        <div class="profile-content">
+          <h2>Apostle Geoffrey Dabibi Numbere</h2>
+          <h4>Founder & Visionary Leader (1944–2014)</h4>
+          <p>
+            Apostle Geoffrey Dabibi Numbere was a towering figure in the history of Pentecostal Christianity in Nigeria and beyond. 
+            A man of rare spiritual depth, fiery conviction, and remarkable humility, he devoted his life to preaching the uncompromised Word of God 
+            and establishing indigenous evangelism across Africa and other parts of the world.
+          </p>
+          <p>
+            In 1969, he founded Greater Evangelism World Crusade (GEWC), a ministry birthed out of prayer, sacrifice, and passion for soul-winning. 
+            Under his leadership, GEWC became a global movement pioneering evangelism and empowering indigenous believers to spread the Gospel.
+          </p>
+          <p>
+            Known for his fiery preaching and humility, Apostle Numbere emphasized repentance, holiness, and the power of the Holy Spirit. 
+            His life remains a testimony of obedience to God’s call, his impact enduring through the ministries and lives he transformed.
+          </p>
+        </div>
+      </article>
+
+      <!-- Pastor Isaac Olori -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/placeholder-olori.jpg" alt="Pastor Isaac Olori">
+        </div>
+        <div class="profile-content">
+          <h2>Pastor Isaac Valentine Olori</h2>
+          <h4>International Director, GEWC</h4>
+          <p>
+            Pastor Isaac Valentine Olori serves as the International Director of Greater Evangelism World Crusade, commissioned on 14 December 2014, succeeding Apostle Numbere. 
+            A scholar of Agricultural Engineering, he has faithfully continued the vision of evangelism, discipleship, and holiness established by the founder.
+          </p>
+          <p>
+            His leadership is marked by deep humility, wisdom, and a passion for soul-winning. He continues to strengthen believers and expand the ministry’s reach globally, 
+            inspiring spiritual revival and dedication to Christ’s mission.
+          </p>
+        </div>
+      </article>
+
+      <!-- Pastor Festus Igbagiri -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/placeholder-festus.jpg" alt="Pastor Festus Igbagiri">
+        </div>
+        <div class="profile-content">
+          <h2>Pastor Festus Igbagiri</h2>
+          <h4>Trustee, GEWC UK</h4>
+          <p>
+            Pastor Festus Igbagiri has been actively involved in ministry for nearly five decades, passionately teaching God’s Word and mentoring young believers. 
+            A retired Consultant Paediatrician, he combines professional excellence with spiritual integrity, ensuring accountability and unity in church governance.
+          </p>
+          <p>
+            His vision is to uphold a church of prayer, integrity, and excellence, where every member feels valued and empowered to serve God and humanity faithfully.
+          </p>
+        </div>
+      </article>
+
+      <!-- Pastor Blessing Gbirigbe -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/placeholder-blessing.jpg" alt="Pastor Blessing Gbirigbe">
+        </div>
+        <div class="profile-content">
+          <h2>Pastor Kabia Blessing Gbirigbe</h2>
+          <h4>Trustee, GEWC UK</h4>
+          <p>
+            Appointed as Trustee in 2008 by Apostle Numbere, Pastor Blessing Gbirigbe has served faithfully with integrity, compassion, and diligence. 
+            A retired Registered Nurse, she is passionate about teaching, welfare, and mentoring the younger generation to live Christ-like lives.
+          </p>
+          <p>
+            Her commitment to transparency and unity continues to strengthen GEWC UK, reflecting the love and hospitality of Christ in every aspect of service.
+          </p>
+        </div>
+      </article>
+
+      <!-- Pastor Ilami Igbagiri -->
+      <article class="profile-card">
+        <div class="profile-image">
+          <img src="images/placeholder-ilami.jpg" alt="Pastor Ilami Igbagiri">
+        </div>
+        <div class="profile-content">
+          <h2>Pastor Ilami Igbagiri</h2>
+          <h4>Trustee, GEWC UK</h4>
+          <p>
+            A dedicated Christian for over five decades, Pastor Ilami Igbagiri is an avid Bible scholar and teacher of God’s Word. 
+            Her ministry focuses on spiritual support, financial accountability, and stewardship for the church’s mission.
+          </p>
+          <p>
+            A retired Community Pharmacist, she embodies wisdom, humility, and faithfulness, working tirelessly to uphold the vision and integrity of GEWC UK.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>
