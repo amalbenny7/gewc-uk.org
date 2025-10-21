@@ -36,21 +36,28 @@ header {
 }
 
 /* Improved logo responsiveness */
-.logo img {
-  height: auto;
-  width: 140px;                  /* base size */
-  max-height: 55px;              /* keeps header height balanced */
-  object-fit: contain;
-  border-radius: 3px;
-  background: transparent;
-  filter: brightness(1.05) contrast(1.1) saturate(0.9); /* polishes poor-quality image */
-  transition: transform 0.3s ease, filter 0.3s ease;
+/* ===== HEADER LOGO FIX ===== */
+.logo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.logo img:hover {
-  transform: scale(1.02);
-  filter: brightness(1.1) contrast(1.2);
+.logo img {
+  height: auto;
+  width: auto;
+  max-height: 48px;          /* keeps header balanced */
+  object-fit: contain;
+  display: block;
+  background: transparent;
 }
+
+/* Spacing & layering */
+.nav-container { gap: 12px; }
+.hamburger { position: relative; z-index: 20; padding: 8px 12px; }
+.nav-links.show { z-index: 15; }
+.dropdown-content { z-index: 25; }
 
 /* Nav links */
 .nav-links { 
