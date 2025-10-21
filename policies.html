@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Policies | GEWC UK</title>
+
+  <!-- Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/events.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <div id="header"></div>
+
+  <!-- Hero -->
+  <section class="governance-hero" style="background-image:url('images/policies-hero.jpg');">
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <h1>Church Policies</h1>
+        <p>Our policies reflect GEWC UK's commitment to transparency, accountability, and the safety of every member of our community.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policies Section -->
+  <section class="section policies-section" style="background:var(--light);">
+    <div class="section-header">
+      <h2>Official Policy Documents</h2>
+      <p>Please find below the key policies guiding the operation and governance of Greater Evangelism World Crusade UK.</p>
+    </div>
+
+    <div class="event-grid" style="max-width:1100px; margin:0 auto;">
+      <!-- Policy 1 -->
+      <article class="event-card">
+        <img src="images/policy-placeholder.jpg" alt="Complaints Handling">
+        <h3>Complaints Handling Policy</h3>
+        <p>Guidelines for addressing and resolving complaints fairly within the church community.</p>
+        <a href="pdf/Complaints_Handling_Policy.pdf" target="_blank" class="btn">View Document</a>
+      </article>
+
+      <!-- Policy 2 -->
+      <article class="event-card">
+        <img src="images/policy-placeholder.jpg" alt="Risk Management">
+        <h3>Risk Management Policy</h3>
+        <p>Ensuring effective identification, assessment, and management of risks within church operations.</p>
+        <a href="pdf/Risk_Management_Policy.pdf" target="_blank" class="btn">View Document</a>
+      </article>
+
+      <!-- Policy 3 -->
+      <article class="event-card">
+        <img src="images/policy-placeholder.jpg" alt="Safeguarding Policy">
+        <h3>Safeguarding Vulnerable Beneficiaries</h3>
+        <p>Protecting the welfare of children and vulnerable adults through robust safeguarding practices.</p>
+        <a href="pdf/Safeguarding_Vulnerable_Beneficiaries.pdf" target="_blank" class="btn">View Document</a>
+      </article>
+
+      <!-- Policy 4 -->
+      <article class="event-card">
+        <img src="images/policy-placeholder.jpg" alt="Volunteer Management">
+        <h3>Volunteer Management Policy</h3>
+        <p>Guidelines to support and empower volunteers serving in various ministries and outreach programmes.</p>
+        <a href="pdf/Volunteer_Management_Policy.pdf" target="_blank" class="btn">View Document</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- JS Partials -->
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>
