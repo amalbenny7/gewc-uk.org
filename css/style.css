@@ -35,7 +35,28 @@ header {
   padding: 12px 16px; 
 }
 
-.logo img { height: 45px; }
+/* Improved logo responsiveness */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: auto;
+  width: clamp(120px, 14vw, 180px);
+  object-fit: contain;
+  background: none;
+  border-radius: 4px;
+  mix-blend-mode: lighten; /* blends better on dark header */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
 
 /* Nav links */
 .nav-links { 
