@@ -115,5 +115,12 @@
   loadPartial("header", "assets/partials/header");
   loadPartial("footer", "assets/partials/footer");
   </script>
+  <script>
+  // Make the hamburger work even when header is injected via fetch
+  window.toggleMenu = function () {
+    var m = document.getElementById('navMenu');
+    if (m) m.classList.toggle('show');
+  };
+</script>
 </body>
 </html>
