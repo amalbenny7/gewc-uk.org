@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events & Activities – London | GEWC UK</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <section class="policy-section">
+    <div class="policy-container">
+      <h1>Events & Activities – London Church</h1>
+      <p>Stay connected with our fellowships, prayer meetings, and upcoming events at GEWC London Church.</p>
+
+      <div class="policy-block">
+        <h2>Regular Activities</h2>
+        <table class="activities-table">
+          <thead>
+            <tr><th>Activity</th><th>Schedule</th><th>Mode</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Men’s Fellowship</td><td>Monthly</td><td>Flexible</td></tr>
+            <tr><td>Women’s Fellowship</td><td>Last Saturday of every month, 6:00 PM – 7:00 PM</td><td>Online</td></tr>
+            <tr><td>Children’s Fellowship</td><td>Fridays, 6:00 PM – 7:00 PM</td><td>Online</td></tr>
+            <tr><td>Prayer Department</td><td>Wednesdays, 6:00 PM – 7:00 PM</td><td>Online</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="policy-block">
+        <h2>Upcoming Event</h2>
+        <p><strong>Reunion 2025</strong> – Join us for our annual GEWC UK Reunion. Check this page closer to the date for updates.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Past Highlights</h2>
+        <div class="video-grid">
+          <iframe src="https://www.youtube.com/embed/vJeDcGjuF4k" title="Healing Service" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/7LGPOErHoNw" title="Thanksgiving Service" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/rYhw-fEazlg" title="Faith Testimony" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>

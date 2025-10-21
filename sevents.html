@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events & Activities – Sheffield | GEWC UK</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <section class="policy-section">
+    <div class="policy-container">
+      <h1>Events & Activities – Sheffield Church</h1>
+      <p>Explore the programmes, Bible studies, and upcoming gatherings at GEWC Sheffield Church.</p>
+
+      <div class="policy-block">
+        <h2>Regular Activities</h2>
+        <table class="activities-table">
+          <thead>
+            <tr><th>Activity</th><th>Schedule</th><th>Mode</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Thursday Bible Study</td><td>6:00 PM – 7:00 PM</td><td>Online</td></tr>
+            <tr><td>Sunday Worship Service</td><td>9:00 AM – 11:00 AM</td><td>Hybrid (Physical & Online)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="policy-block">
+        <h2>Upcoming Programmes</h2>
+        <p>Special worship sessions, community fellowship, and local outreach programmes are held throughout the year. Check back soon for details of upcoming Sheffield events.</p>
+      </div>
+
+      <div class="policy-block">
+        <h2>Recent Highlights</h2>
+        <div class="video-grid">
+          <iframe src="https://www.youtube.com/embed/HFk6NYKYnEQ" title="Sheffield Testimony" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script>
+    async function loadPartial(id, file) {
+      const res = await fetch(file);
+      document.getElementById(id).innerHTML = await res.text();
+    }
+    loadPartial("header", "assets/partials/header.html");
+    loadPartial("footer", "assets/partials/footer.html");
+  </script>
+</body>
+</html>

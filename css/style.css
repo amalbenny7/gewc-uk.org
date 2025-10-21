@@ -330,3 +330,37 @@ footer { background: var(--dark); color: var(--white); padding: 40px 20px; }
 .btn-center .btn:hover {
   background: var(--accent);
 }
+
+/* ===== EVENTS & ACTIVITIES PAGE (LONDON / SHEFFIELD) ===== */
+
+.activities-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.activities-table th, .activities-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.activities-table th {
+  background: var(--light);
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-grid iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 6px;
+}
