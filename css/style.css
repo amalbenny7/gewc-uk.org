@@ -88,7 +88,15 @@ header {
   cursor: pointer; 
   color: var(--white);
 }
+/* --- FIX HAMBURGER INTERACTIVITY --- */
+.hamburger {
+  position: relative;
+  z-index: 30;          /* keeps it above all other elements */
+}
 
+.nav-links.show {
+  z-index: 25;          /* ensures the dropdown shows on top */
+}
 /* Dropdown Menu */
 .dropdown { position: relative; }
 .dropbtn { background: none; border: none; font: inherit; cursor: pointer; }
