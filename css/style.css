@@ -88,15 +88,6 @@ header {
   cursor: pointer; 
   color: var(--white);
 }
-/* --- FIX HAMBURGER INTERACTIVITY --- */
-.hamburger {
-  position: relative;
-  z-index: 30;          /* keeps it above all other elements */
-}
-
-.nav-links.show {
-  z-index: 25;          /* ensures the dropdown shows on top */
-}
 /* Dropdown Menu */
 .dropdown { position: relative; }
 .dropbtn { background: none; border: none; font: inherit; cursor: pointer; }
@@ -238,4 +229,30 @@ footer { background: var(--dark); color: var(--white); padding: 40px 20px; }
   .hamburger { display: block; color: var(--white); }
   .hero { height: 60vh; background-position: top; }
   .hero-text h1 { font-size: 2rem; }
+}
+/* --- FINAL HAMBURGER FIX --- */
+.hamburger {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--white);
+  cursor: pointer;
+  position: relative;
+  z-index: 9999;           /* ensure it’s always on top */
+}
+
+.nav-links {
+  transition: all 0.3s ease;
+}
+
+.nav-links.show {
+  display: flex !important;
+  flex-direction: column;
+  background: var(--dark);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  gap: 15px;
+  z-index: 9998;           /* ensures menu overlays content */
 }
