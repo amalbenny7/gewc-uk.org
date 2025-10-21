@@ -256,3 +256,77 @@ footer { background: var(--dark); color: var(--white); padding: 40px 20px; }
     z-index: 9998;
   }
 }
+
+/* --- church services  --- */
+.policy-section {
+  background: var(--light);
+  padding: 60px 20px;
+}
+
+.policy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.policy-container h1 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.policy-container p {
+  color: var(--muted);
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.policy-block {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.policy-block h2 {
+  color: var(--dark);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.service-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.service-table th, .service-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.service-table th {
+  background: var(--light);
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.btn-center {
+  text-align: center;
+}
+
+.btn-center .btn {
+  background: var(--dark);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.btn-center .btn:hover {
+  background: var(--accent);
+}

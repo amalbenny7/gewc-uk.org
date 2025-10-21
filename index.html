@@ -106,13 +106,5 @@
     </div>
   </section>
   <div id="footer"></div>
-  <script>
-  async function loadPartial(id, file) {
-    const res = await fetch(file);
-    document.getElementById(id).innerHTML = await res.text();
-  }
-  loadPartial("header", "assets/partials/header");
-  loadPartial("footer", "assets/partials/footer");
-  </script>
 </body>
 </html>
