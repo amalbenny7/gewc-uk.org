@@ -128,18 +128,6 @@
 
     </div>
   </section>
-
-  <!-- Footer partial -->
   <div id="footer"></div>
-
-  <!-- Load header/footer -->
-  <script>
-  async function loadPartial(id, file) {
-    const res = await fetch(file);
-    document.getElementById(id).innerHTML = await res.text();
-  }
-  loadPartial("header", "assets/partials/header.html");
-  loadPartial("footer", "assets/partials/footer.html");
-  </script>
 </body>
 </html>

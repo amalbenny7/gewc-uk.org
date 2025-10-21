@@ -49,18 +49,6 @@
       <blockquote>“The earth shall be filled with the knowledge of the glory of the Lord, as the waters cover the sea.” – Habakkuk 2:14</blockquote>
     </div>
   </section>
-
-  <!-- Footer -->
   <div id="footer"></div>
-
-  <!-- JS Partials -->
-  <script>
-    async function loadPartial(id, file) {
-      const res = await fetch(file);
-      document.getElementById(id).innerHTML = await res.text();
-    }
-    loadPartial("header", "assets/partials/header.html");
-    loadPartial("footer", "assets/partials/footer.html");
-  </script>
 </body>
 </html>
