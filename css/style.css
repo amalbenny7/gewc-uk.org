@@ -36,21 +36,8 @@ header {
 }
 
 /* Improved logo responsiveness */
-/* ===== HEADER LOGO FIX ===== */
-.logo {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo img {
-  height: auto;
-  width: auto;
-  max-height: 48px;          /* keeps header balanced */
-  object-fit: contain;
-  display: block;
-  background: transparent;
+.logo img { 
+  height: 45px; 
 }
 
 /* Spacing & layering */
